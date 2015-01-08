@@ -12,7 +12,7 @@
 			<form id="add-flashcard" onsubmit="return saveForm();">
 				<input id="heading-text" type="text" placeholder="Flashcard Name Here" />
 				<br /><textarea id="sub-heading-text" / placeholder="Answer For Flashcard Here"></textarea>
-				<br /><input type="submit" value="Save" />
+				<br /><button id="save-text">Save</button>
 			</form>
 
 			<button id="clear-flashcards">Clear Flashcards</button>
@@ -37,7 +37,7 @@
 		<p>Upload a text file of your flashcards here (if you want to use on some other computer)</p>
 		<form onsubmit="uploadText(); return false;">
 			<input id="upload-text" type="file" name="textfile">
-			<br /><input type="submit" name="upload" value="Upload" />
+			<br /><button>Upload</button>
 		</form>
 	</div>
 

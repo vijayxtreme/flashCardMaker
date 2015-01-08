@@ -113,20 +113,23 @@ window.onload = function(){
 function saveForm(){
 	var headingText = document.getElementById('heading-text').value;
 	var subText = document.getElementById('sub-heading-text').value;
-
-	var obj = {
-		'heading':headingText,
-		'subText': subText
-	};
-
-	cards.push(obj);
-	
-	if(localStorage) {
-		localStorage['cards'] = JSON.stringify(cards);
-		alert(val + " was saved");
-		location.reload();
+	if((headingText == undefined || headingText =="") || (subText== undefined || subText =="")){
+		alert("Please enter value for the flashcard and flashcard answer");
 	}else{
-		alert(val + " was not saved");		
+		var obj = {
+			'heading':headingText,
+			'subText': subText
+		};
+
+		cards.push(obj);
+		
+		if(localStorage) {
+			localStorage['cards'] = JSON.stringify(cards);
+			alert(val + " was saved");
+			location.reload();
+		}else{
+			alert(val + " was not saved");		
+		}
 	}
 	return false;	
 }

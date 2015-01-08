@@ -1,3 +1,5 @@
+
+
 h4, p { margin:0;}
 h1 {text-align: center;}
 div {
@@ -54,6 +56,14 @@ textarea#sub-heading-text { height:120px;}
 	}
 }
 @media only screen and (max-width: 1080px){
+	#save-text{
+		height:50px;
+		width: 100%;
+	}
+	button {
+		height:45px;
+		width:100%;
+	}
 	#flashcard {
 		width: 90%;
 		height: 300px;
@@ -74,11 +84,18 @@ textarea#sub-heading-text { height:120px;}
 		font-size:32px;
 	}*/
 
-	#menu{
+	#menu, #download, #upload{
 		width: 90%;
 		margin: 0 auto;
+		padding:10px 0;
 	}
+	
 
+	#navigation button {
+		width: 90%;
+		margin: 0 auto;
+		width:30%;
+	}
 
 	#display-answer {
 		position: absolute;
