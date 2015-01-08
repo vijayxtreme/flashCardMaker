@@ -10,7 +10,7 @@ Version: 1.0
 
 */
 
-
+var i = 0;
 var cards = [];
 //var flashCards = [];
 if (localStorage['cards'] != undefined){
@@ -29,35 +29,38 @@ if (localStorage['cards'] != undefined){
 window.onload = function(){
 
 	//Some arbitrary flashcards
-	var i = -1;
+	if(localStorage['cards'] != undefined){
+		document.getElementById('heading').innerHTML = cards[i]['heading'];	
+		document.getElementById('subheading').innerHTML= cards[i]['subText'];	
+		document.getElementById('display-answer').style.display = "block";	
+	}
 	
 	//Handle Next & Prev Events
 	document.getElementById('next').onclick = function(){
 		
 		if(cards.length !== 0){
-			document.getElementById('display-answer').style.display = "block";
-			document.getElementById('subheading').style.display = "none";			
+			
 			++i;
 			if(i<cards.length){			
 				document.getElementById('heading').innerHTML = cards[i]['heading'];	
-				document.getElementById('subheading').innerHTML= cards[i]['subText'];	
+				document.getElementById('subheading').innerHTML= cards[i]['subText'];
+
 			}else{
 				i=0;
 				document.getElementById('heading').innerHTML = cards[i]['heading'];	
 				document.getElementById('subheading').innerHTML= cards[i]['subText'];	
 			}
+			document.getElementById('subheading').style.display = "none";
 		
 		}else{
-			document.getElementById('heading').innerHTML = "No flashcards saved yet";
+			document.getElementById('heading').innerHTML = "No flashcards saved yet, why don't you add one?";
 			document.getElementById('subheading').innerHTML = "";
 		}
 	};
 
 	document.getElementById('prev').onclick = function(){
 		
-		if(cards.length !== 0){
-			document.getElementById('display-answer').style.display = "block";
-			document.getElementById('subheading').style.display = "none";		
+		if(cards.length !== 0){	
 			if(i>0 && i<cards.length){
 				--i;
 				document.getElementById('heading').innerHTML = cards[i]['heading'];	
@@ -68,8 +71,9 @@ window.onload = function(){
 				document.getElementById('heading').innerHTML = cards[i]['heading'];	
 				document.getElementById('subheading').innerHTML= cards[i]['subText'];		
 			}
+			document.getElementById('subheading').style.display = "none";
 		}else {
-			document.getElementById('heading').innerHTML = "No flashcards saved yet";
+			document.getElementById('heading').innerHTML = "No flashcards saved yet, why don't you add one?";
 			document.getElementById('subheading').innerHTML = "";
 		}
 	};
