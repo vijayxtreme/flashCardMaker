@@ -34,7 +34,7 @@ window.onload = function(){
 		document.getElementById('subheading').innerHTML= cards[i]['subText'];	
 		document.getElementById('display-answer').style.display = "block";	
 	}else {
-		document.getElementById('heading').innerHTML = "No flashcards saved yet, why don't you create one?";
+		document.getElementById('heading').innerHTML = "No flashcards saved yet, why don't you create some?";
 		document.getElementById('subheading').innerHTML = "";
 	}
 	
