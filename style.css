@@ -1,6 +1,8 @@
 h4, p { margin:0;}
 h1 {text-align: center;}
-
+div {
+	margin:10px 0;
+}
 .container {
 	position: relative;
 }

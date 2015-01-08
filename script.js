@@ -91,9 +91,24 @@ window.onload = function(){
 		subheading.style.display = (subheading.style.display == '' || subheading.style.display == 'none') ? 'block' : 'none';
 		
 	};
-		
+
+	//Download Text
+	document.getElementById('dl').onclick = function(){
+		var data = new Blob([JSON.stringify(cards)], {type: 'text/plain'});
+		var text = window.URL.createObjectURL(data);
+		document.getElementById('dl').href = text;
+
+	};
+
+	//Upload
+	document.getElementById('upload-text').addEventListener('change', readSingleFile, false);
+
+
+
 
 };
+
+
 
 function saveForm(){
 	var headingText = document.getElementById('heading-text').value;
@@ -115,6 +130,29 @@ function saveForm(){
 	}
 	return false;	
 }
+function readSingleFile(evt){
+	//Upload Text File
+
+	var res = confirm("This will overwrite the current flashcard database. Okay?");
+	
+	if(res){
+		var f = evt.target.files[0];
+
+		if(f){
+			 var r = new FileReader();
+		     r.onload = function(e) { 
+			      var contents = e.target.result; 	
+			      localStorage['cards'] = contents;
+				  location.reload();
+
+		     }
+			r.readAsText(f);
+
+		}
+	}
+
+}
+
 
 
 

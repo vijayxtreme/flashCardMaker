@@ -29,6 +29,17 @@
 		</div>
 		
 	</div>
+	<div id="download">
+		<p>Download a text file of your flashcards saved (to upload later)</p>
+		<a id="dl" href="#" download="download.txt">Download here</a>
+	</div>
+	<div id="upload">
+		<p>Upload a text file of your flashcards here (if you want to use on some other computer)</p>
+		<form onsubmit="uploadText(); return false;">
+			<input id="upload-text" type="file" name="textfile">
+			<br /><input type="submit" name="upload" value="Upload" />
+		</form>
+	</div>
 
 </body>
 </html>
