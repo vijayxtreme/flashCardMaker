@@ -33,6 +33,9 @@ window.onload = function(){
 		document.getElementById('heading').innerHTML = cards[i]['heading'];	
 		document.getElementById('subheading').innerHTML= cards[i]['subText'];	
 		document.getElementById('display-answer').style.display = "block";	
+	}else {
+		document.getElementById('heading').innerHTML = "No flashcards saved yet, why don't you create one?";
+		document.getElementById('subheading').innerHTML = "";
 	}
 	
 	//Handle Next & Prev Events
@@ -52,9 +55,6 @@ window.onload = function(){
 			}
 			document.getElementById('subheading').style.display = "none";
 		
-		}else{
-			document.getElementById('heading').innerHTML = "No flashcards saved yet, why don't you add one?";
-			document.getElementById('subheading').innerHTML = "";
 		}
 	};
 
@@ -72,9 +72,6 @@ window.onload = function(){
 				document.getElementById('subheading').innerHTML= cards[i]['subText'];		
 			}
 			document.getElementById('subheading').style.display = "none";
-		}else {
-			document.getElementById('heading').innerHTML = "No flashcards saved yet, why don't you add one?";
-			document.getElementById('subheading').innerHTML = "";
 		}
 	};
 
