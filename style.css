@@ -1,0 +1,50 @@
+
+h1{
+	text-align: center;
+}
+
+.container {
+	position: relative;
+}
+
+#flashcard {
+	width: 600px;
+	height: 300px;
+	border: 1px solid #000;
+	margin: 0 auto;
+	margin-top:80px;
+	text-align:center;
+	position:relative;
+}
+/*
+#heading {
+	position:absolute;
+	top:150px;
+	height:100px;
+	width:80%;
+	left:50%;
+	margin-left:-40%;
+	font-size:32px;
+}*/
+
+#navigation {
+	text-align: center;
+}
+
+#menu{
+	position:absolute;
+	top:0;
+	left:10px;
+	width:150px;
+}
+
+#display-answer {
+	display:none;
+}
+#display-answer {
+	position: absolute;
+	top: 150px;
+	left:50%;
+	margin-left:-100px;
+	width:200px;
+}

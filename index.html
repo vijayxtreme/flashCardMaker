@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>Simple Local Storage</title>
+	<link rel="stylesheet" href="style.css" />
+	<script src="script.js"></script>
+</head>
+<body>
+	<h1>Simple Local Storage Example</h1>
+	<div class="container">
+		<div id="flashcard">
+			<h2 id="heading" class="heading">Your Flash Card To Save Here</h2>
+			<p id="subheading" class="subheading">Your Flashcard Answer Goes Here</p>
+			<button id="display-answer">Display Answer</button>
+
+		</div>
+		<div id="navigation">
+			<button id="prev"><<</button> | <button id="next">>></button>
+			
+		</div>
+		<div id="menu">
+			<h4>Add A Flashcard</h4>
+			<form id="add-flashcard" onsubmit="return saveForm();">
+				<input id="heading-text" type="text" placeholder="Enter heading text here" />
+				<br /><input id="sub-heading-text" type="text" placeholder="Enter subtext here" />
+				<br /><input type="submit" value="Save" />
+			</form>
+
+			<button id="clear-flashcards">Clear Flashcards</button>
+		</div>
+	</div>
+
+</body>
+</html>
