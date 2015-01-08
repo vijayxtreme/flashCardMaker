@@ -6,45 +6,84 @@ h1 {text-align: center;}
 }
 input#heading-text, textarea#sub-heading-text { width:100%; }
 textarea#sub-heading-text { height:120px;}
-
-#flashcard {
-	width: 600px;
-	height: 300px;
-	border: 1px solid #000;
-	margin: 0 auto;
-	margin-top:20px;
-	text-align:center;
-	position:relative;
+#display-answer, .subheading {
+	display:none;
 }
-/*
-#heading {
-	position:absolute;
-	top:150px;
-	height:100px;
-	width:80%;
-	left:50%;
-	margin-left:-40%;
-	font-size:32px;
-}*/
 
 #navigation {
 	text-align: center;
 }
+@media only screen and (min-width:1081px){
+	
+	#flashcard {
+		width: 600px;
+		height: 300px;
+		border: 1px solid #000;
+		margin: 0 auto;
+		margin-top:20px;
+		text-align:center;
+		position:relative;
+	}
+	/*
+	#heading {
+		position:absolute;
+		top:150px;
+		height:100px;
+		width:80%;
+		left:50%;
+		margin-left:-40%;
+		font-size:32px;
+	}*/
 
-#menu{
-	position:absolute;
-	top:0;
-	left:10px;
-	width:150px;
-}
 
-#display-answer, .subheading {
-	display:none;
+	#menu{
+		position:absolute;
+		top:0;
+		left:10px;
+		width:150px;
+	}
+
+	#display-answer {
+		position: absolute;
+		top: 150px;
+		left:50%;
+		margin-left:-100px;
+		width:200px;
+	}
 }
-#display-answer {
-	position: absolute;
-	top: 150px;
-	left:50%;
-	margin-left:-100px;
-	width:200px;
+@media only screen and (max-width: 1080px){
+	#flashcard {
+		width: 90%;
+		height: 300px;
+		border: 1px solid #000;
+		margin: 0 auto;
+		margin-top:20px;
+		text-align:center;
+		position:relative;
+	}
+	/*
+	#heading {
+		position:absolute;
+		top:150px;
+		height:100px;
+		width:80%;
+		left:50%;
+		margin-left:-40%;
+		font-size:32px;
+	}*/
+
+	#menu{
+		width: 90%;
+		margin: 0 auto;
+	}
+
+
+	#display-answer {
+		position: absolute;
+		top: 150px;
+		left:50%;
+		margin-left:-100px;
+		width:200px;
+	}
+	
 }
